@@ -11,7 +11,7 @@ interface BalanceCardProps {
 export default function BalanceCard({ balance, isLoading, onReceive, onSend }: BalanceCardProps) {
   const formattedBalance = isLoading 
     ? "Loading..." 
-    : `$${parseFloat(balance).toFixed(2)}`;
+    : `₱${parseFloat(balance).toFixed(2)}`;
   
   return (
     <div className="bg-primary text-primary-foreground rounded-xl p-5 shadow-lg mb-6">
