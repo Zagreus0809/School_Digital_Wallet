@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 240 10% 13%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 13%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 13%;
+    
+    --primary: 240 50% 48%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 36 100% 60%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 5% 45%;
+    
+    --accent: 240 5% 93%;
+    --accent-foreground: 240 10% 13%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --success: 142 70% 49%;
+    --success-foreground: 0 0% 98%;
+    
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 240 5% 65%;
+    
+    --radius: 0.5rem;
+    
+    /* Chart colors */
+    --chart-1: var(--primary);
+    --chart-2: var(--secondary);
+    --chart-3: 142 70% 49%;
+    --chart-4: 0 84% 60%;
+    --chart-5: 261 52% 58%;
+    
+    /* Sidebar colors */
+    --sidebar-background: var(--background);
+    --sidebar-foreground: var(--foreground);
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--accent);
+    --sidebar-accent-foreground: var(--accent-foreground);
+    --sidebar-border: var(--border);
+    --sidebar-ring: var(--ring);
+  }
+  
+  * {
+    @apply border-border font-sans;
+  }
+  
+  body {
+    @apply antialiased bg-background text-foreground min-h-screen overflow-hidden touch-manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  /* QR container styling */
+  .qr-container {
+    @apply bg-white p-4 rounded-lg shadow-md;
+  }
+  
+  /* Transaction indicators */
+  .transaction-incoming {
+    @apply bg-success/10 rounded-full p-2;
+  }
+  
+  .transaction-outgoing {
+    @apply bg-destructive/10 rounded-full p-2;
+  }
+  
+  .transaction-deposit {
+    @apply bg-primary/10 rounded-full p-2;
+  }
+  
+  /* Page transitions */
+  .page-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  .slide-in {
+    @apply transform-none opacity-100;
+  }
+  
+  .slide-out {
+    @apply translate-x-full opacity-0;
+  }
+}
