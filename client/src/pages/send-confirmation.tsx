@@ -125,7 +125,7 @@ export default function SendConfirmationPage() {
               <div className="mb-6">
                 <label className="block text-muted-foreground text-sm mb-1">Amount</label>
                 <div className="relative">
-                  <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground">$</span>
+                  <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground">₱</span>
                   <Input 
                     type="number" 
                     className="pl-8 text-xl font-medium" 
@@ -151,12 +151,12 @@ export default function SendConfirmationPage() {
               <div className="mt-auto">
                 <div className="flex justify-between items-center mb-4">
                   <p className="text-muted-foreground">Transaction Fee</p>
-                  <p className="font-medium">$0.00</p>
+                  <p className="font-medium">₱0.00</p>
                 </div>
                 
                 <div className="flex justify-between items-center mb-6">
                   <p className="font-medium">Total</p>
-                  <p className="font-semibold text-lg">${parseFloat(amount || "0").toFixed(2)}</p>
+                  <p className="font-semibold text-lg">₱{parseFloat(amount || "0").toFixed(2)}</p>
                 </div>
                 
                 <Button 

@@ -41,7 +41,7 @@ export default function SuccessModal({
           <div className="w-full p-4 bg-muted rounded-lg mb-4">
             <div className="flex justify-between mb-2">
               <span className="text-muted-foreground">Amount</span>
-              <span className="font-medium">${transaction?.amount}</span>
+              <span className="font-medium">₱{transaction?.amount}</span>
             </div>
             <div className="flex justify-between mb-2">
               <span className="text-muted-foreground">To</span>

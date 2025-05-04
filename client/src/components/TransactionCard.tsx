@@ -52,7 +52,7 @@ export default function TransactionCard({ transaction, currentUserId, showNote =
           </div>
         </div>
         <div className={`font-mono font-medium ${isIncoming ? "text-success" : "text-destructive"}`}>
-          {isIncoming ? '+' : '-'}${amount.toFixed(2)}
+          {isIncoming ? '+' : '-'}₱{amount.toFixed(2)}
         </div>
       </div>
       
