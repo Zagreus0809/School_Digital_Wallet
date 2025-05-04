@@ -33,7 +33,7 @@ export default function ReceivePage() {
       if (navigator.share) {
         await navigator.share({
           title: "School Digital Wallet",
-          text: `Payment request from ${user?.fullName}${amount ? ` for $${amount}` : ""}`,
+          text: `Payment request from ${user?.fullName}${amount ? ` for ₱${amount}` : ""}`,
           url: `${window.location.origin}/send-confirmation/${user?.walletId}${amount ? `/${amount}` : ""}`
         });
       } else {
@@ -89,7 +89,7 @@ export default function ReceivePage() {
                   </label>
                   <div className="relative">
                     <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground">
-                      $
+                      ₱
                     </span>
                     <Input
                       type="number"
